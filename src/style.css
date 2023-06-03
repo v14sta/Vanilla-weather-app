@@ -32,9 +32,14 @@ ul {
   width: 90px;
 }
 .search-form {
-  border-bottom: 2px solid rgb(104, 104, 104);
+  border-bottom: 1px solid rgb(104, 104, 104);
   margin-top: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+.about {
+  border-bottom: 1px solid rgb(104, 104, 104);
+  margin-bottom: 15px;
   padding-bottom: 5px;
 }
 .container {
@@ -88,4 +93,6 @@ ul {
   width: 600px;
   margin: 100px auto;
   margin-top: 0px;
+}
+.forcast-weather {
 }

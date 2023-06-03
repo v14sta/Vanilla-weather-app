@@ -40,50 +40,58 @@
           </div>
         </form>
         <h1 id="cityName"></h1>
-        <div class="row">
-          <div class="col-6">
-            <ul class="firstCol">
-              <li id="dayTime"><div class="weekday" id="week"></div></li>
-              <li id="wedCondition">
-                <div class="WeatherDescription" id="description">sunny</div>
-              </li>
-              <li>
-                <span
-                  ><strong>Humidity:</strong><span id="humidity"></span
-                ></span>
-              </li>
-              <li>
-                <span><strong>Wind:</strong><span id="Wind"></span></span>
-              </li>
-            </ul>
+        <div class="about">
+          <div class="row">
+            <div class="col-6">
+              <ul class="firstCol">
+                <li id="dayTime"><div class="weekday" id="week"></div></li>
+                <li id="wedCondition">
+                  <div class="WeatherDescription" id="description">sunny</div>
+                </li>
+                <li>
+                  <span
+                    ><strong>Humidity:</strong><span id="humidity"></span
+                  ></span>
+                </li>
+                <li>
+                  <span><strong>Wind:</strong><span id="Wind"></span></span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li class="weatherIcon">
+                  <a id="celsious" href="#ToCels">°C</a> |
+                  <a id="Fahrenheit" href="#ToFahr">°F</a>
+                  <h1 class="weatherIcon" id="cityLink">°1</h1>
+                </li>
+                <li class="weatherIcon">
+                  <img
+                    id="icon"
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/703/original/sunny.png?1685364631"
+                    width="80px"
+                  />
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="col-6">
-            <ul>
-              <li class="weatherIcon">
-                <a id="celsious" href="#ToCels">°C</a> |
-                <a id="Fahrenheit" href="#ToFahr">°F</a>
-                <h1 class="weatherIcon" id="cityLink">°1</h1>
-              </li>
-              <li class="weatherIcon">
-                <img
-                  id="icon"
-                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/703/original/sunny.png?1685364631"
-                  width="80px"
-                />
-              </li>
-            </ul>
+        </div>
+        <div class="forcast-weather" id="forcast-weather">
+          <div class="row">
+            <div class="col-2">
+              <div class="date-forcast"><h6>Thu</h6></div>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/703/original/sunny.png?1685364631"
+                width="60px"
+              />
+              <div class="forcast-temp" id="forcast-temp">
+                <span class="max-temp">23°</span>
+                <span class="min-temp"> 19°</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="textCode">
-      <a
-        class="openCode"
-        href="https://github.com/v14sta/my-weather"
-        target="_blank"
-        >Open-scource code</a
-      >
-      by Venus
     </div>
     <script src="src/index.js"></script>
   </body>
