@@ -5,7 +5,7 @@ function weatherDescription(response) {
 
   celtemp = response.data.main.temp;
   let temperature = document.querySelector("#cityLink");
-  let tempValue = Math.round(response.data.main.temp);
+  let tempValue = Math.round(celtemp);
   temperature.innerHTML = ` ${tempValue}°`;
 
   let description = document.querySelector("#description");
@@ -82,3 +82,30 @@ fahr.addEventListener("click", Fahrenheit);
 
 let cels = document.querySelector("#celsious");
 cels.addEventListener("click", celsious);
+
+//---------------------adding forcast----------//
+function forcastDisplay() {
+  let wedforcast = document.querySelector("#forcast-weather");
+  let forcastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forcastHTML =
+      forcastHTML +
+      `
+  <div class="col-2">
+    <div class="date-forcast">${day}</div>
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/703/original/sunny.png?1685364631"
+      width="60px"
+    />
+    <div class="forcast-temp" id="forcast-temp">
+      <span class="max-temp">23°</span>
+      <span class="min-temp"> 19°</span>
+    </div>
+  </div>
+  `;
+  });
+  forcastHTML = forcastHTML + `</div>`;
+  wedforcast.innerHTML = forcastHTML;
+}
+forcastDisplay();
