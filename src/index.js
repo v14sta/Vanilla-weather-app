@@ -66,15 +66,16 @@ weekdate.innerHTML = formatDate();
 function celsious(event) {
   event.preventDefault();
   let tempCel = document.querySelector("#cityLink");
-  tempCel.innerHTML = 21;
+  tempCel.innerHTML = ` °${Math.round(celtemp)}`;
 }
 
 function Fahrenheit(event) {
   event.preventDefault();
   let tempFar = document.querySelector("#cityLink");
-  tempFar.innerHTML = 70;
+  let farElement = (celtemp * 9) / 5 + 32;
+  tempFar.innerHTML = ` °${Math.round(farElement)}`;
 }
-
+let celtemp = null;
 let fahr = document.querySelector("#Fahrenheit");
 fahr.addEventListener("click", Fahrenheit);
 
