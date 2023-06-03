@@ -1,6 +1,8 @@
 body {
   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
-  background-color: rgb(248, 239, 239);
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/240/original/kaushik-panchal-0juC5JIhPks-unsplash.jpg?1685792444");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 h1 {
   color: rgb(33, 33, 33);
