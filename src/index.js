@@ -3,6 +3,7 @@ function weatherDescription(response) {
   let cityValue = document.querySelector("#cityName");
   cityValue.innerHTML = response.data.name;
 
+  celtemp = response.data.main.temp;
   let temperature = document.querySelector("#cityLink");
   let tempValue = Math.round(response.data.main.temp);
   temperature.innerHTML = ` ${tempValue}°`;
