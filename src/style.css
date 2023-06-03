@@ -1,9 +1,10 @@
 body {
   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  background-color: rgb(248, 239, 239);
 }
 h1 {
   color: rgb(33, 33, 33);
-  font-size: 44px;
+  font-size: 55px;
   font-weight: 400;
   line-height: 28px;
   margin-top: 10px;
@@ -15,35 +16,29 @@ ul {
 .firstCol {
   margin-top: 10px;
 }
-.weatherIcon {
-  display: inline;
-  padding: 0px 16px;
-}
-.li img {
-  margin: 0px 0px 0px 0px;
-}
-.search-form {
-  border-bottom: 3px solid #f9f7fe;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-}
 .weather {
   margin: 20px auto;
   max-width: 600px;
 }
-.Weather img {
-  margin: 0px 0px 0px 0px;
+.weatherIcon {
+  justify-content: flex-end;
+  display: inline;
+  padding: 0px;
+}
+.li img {
+  margin: 1px 1px 1px 1px;
   width: 90px;
 }
-.textCode {
-  width: 600px;
-  margin: 100px auto;
-  margin-top: 0px;
+.search-form {
+  border-bottom: 2px solid rgb(104, 104, 104);
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 .container {
+  background-color: rgb(255, 255, 255);
   width: 600px;
-  color: gray;
+  color: rgb(33, 33, 33);
   padding: 0px auto;
   margin: 100px auto;
   margin-bottom: 0px;
