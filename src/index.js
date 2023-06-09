@@ -78,20 +78,10 @@ cels.addEventListener("click", celsious);
 
 //----------------------City weather and description---------------//
 //get weather description for
-function locPosition(response) {
-  let city = document.querySelector("#search-city").value;
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = `${city}`;
-  let apiKey = "96ad27349a64ea1dcdfbe6f4d458c085";
+function locPosition(city) {
+  let apiKey = "52762f86df418f479f71739bf7d198db";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(weatherDescription);
-
-  //get coordinates for current location
-  let lat = response.data.coords.latitude;
-  let long = response.data.coords.longitude;
-  let apiK = "96ad27349a64ea1dcdfbe6f4d458c085";
-  let apiU = `https://api.shecodes.io/weather/v1/forecast?lon=${long}&lat=${lat}&appid=${apiK}&units=metric`;
-  axios.get(`${apiU}&appid=${apiK}`).then(currentDescription);
 }
 
 //get searchbox value from user
@@ -105,20 +95,16 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
 
 //------------------current location button display----------------//
-function currentDescription(response) {
-  let weekdate = document.querySelector("#week");
-  weekdate.innerHTML = formatDate();
-  let cityLoc = document.querySelector("#cityName");
-  cityLoc.innerHTML = response.data.name;
-  let tempLoc = document.querySelector("#cityLink");
-  let tempNum = Math.round(response.data.main.temp);
-  tempLoc.innerHTML = tempNum;
-  let desLoc = document.querySelector("#description");
-  desLoc.innerHTML = response.data.weather[0].description;
+function currentPosition(position) {
+  let lat = position.coords.latitude;
+  let long = position.coords.longitude;
+  let apiK = "b35c686ba9565ba0ab254c2230937552";
+  let apiU = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiK}&units=metric`;
+  axios.get(`${apiU}&appid=${apiK}`).then(weatherDescription);
 }
 function currentLocation(event) {
   event.preventDefault();
-  navigator.geolocation.getCurrentPosition(locPosition);
+  navigator.geolocation.getCurrentPosition(currentPosition);
 }
 
 let currentButton = document.querySelector("#currentLoc");
@@ -154,7 +140,7 @@ function dispalyForecast(response) {
   }
 }
 function search(city) {
-  let apiKey = "41f2d006b8af42b250317a5fbdd3fe72";
+  let apiKey = "52762f86df418f479f71739bf7d198db";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(weatherDescription);
 
